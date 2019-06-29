@@ -1,0 +1,8 @@
+{
+"name": "Just A Bot",
+"version": "1.0.0",
+"description": "a discord bot",
+"main": "bot.js",
+"author": "Just A Box",
+"dependencies": {}
+}
