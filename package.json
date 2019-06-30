@@ -1,8 +1,22 @@
 {
-"name": "Just A Bot",
-"version": "1.0.0",
-"description": "a discord bot",
-"main": "bot.js",
-"author": "Just A Box",
-"dependencies": {}
+  "name": "just-a-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnathanmitri/DiscordBot.git"
+  },
+  "author": "Just A Box",
+  "license": "SEE LICENSE IN license.md",
+  "bugs": {
+    "url": "https://github.com/johnathanmitri/DiscordBot/issues"
+  },
+  "homepage": "https://github.com/johnathanmitri/DiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
 }
