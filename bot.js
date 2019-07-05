@@ -1,13 +1,5 @@
 Discord = require('discord.js');
 client = new Discord.Client();
-try 
-{
-  require('dotenv').config()
-}
-catch(err) {
-  
-}
-
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
