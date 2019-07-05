@@ -16,6 +16,8 @@ client.on('message', msg => {
 
 	if (msg.content === 'ping') 
 		msg.reply('pong');
+        if (msg.content === 'ab8')
+                console.log(msg.channel.guild.roles)
 });
 
 client.login(process.env.AUTH_TOKEN);
