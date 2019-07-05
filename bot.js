@@ -1,6 +1,13 @@
 Discord = require('discord.js');
 client = new Discord.Client();
-auth = require('./auth.json');
+try 
+{
+  require('dotenv').config()
+}
+catch(err) {
+  
+}
+
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -19,4 +26,4 @@ client.on('message', msg => {
 		msg.reply('pong');
 });
 
-client.login(auth.token);
+client.login(process.env.AUTH_TOKEN);
