@@ -1,11 +1,12 @@
 Discord = require('discord.js');
 client = new Discord.Client();
 
-var tid = setTimeout(loop, 3000);
-
+loopChannel;
+int i = 1;
 loop()
 {
-	
+	loopChannel.send(i.toString());
+	i++;
 }
 
 client.on('ready', () => {
@@ -20,6 +21,13 @@ client.on('message', msg => {
 		console.log(`${msg.author.username} DMed "${msg.content}"`)
 	else
 		console.log('group chat?')
+
+	if (msg.content === 'count bitch')
+	{
+		loopChannel = Channel;
+		msg.reply('ok fine retard');
+		var tid = setTimeout(loop, 3000);
+	}
 
 	if (msg.content === 'ping') 
 		msg.reply('pong');
