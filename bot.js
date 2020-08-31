@@ -1,7 +1,7 @@
 Discord = require('discord.js');
 client = new Discord.Client();
 
-loopChannel;
+var loopChannel;
 int i = 1;
 loop()
 {
