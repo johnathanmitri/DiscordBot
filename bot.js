@@ -1,6 +1,13 @@
 Discord = require('discord.js');
 client = new Discord.Client();
 
+var tid = setTimeout(loop, 3000);
+
+loop()
+{
+	
+}
+
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
