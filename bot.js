@@ -1,15 +1,18 @@
+//require('dotenv').config()
+
 Discord = require('discord.js');
 client = new Discord.Client();
 
 var loopChannel;
 var loopCount = 1;
+var tid;
 
 function loop()
 {
 	loopChannel.send(loopCount.toString());
 	loopCount++;
 }
-
+	
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -27,10 +30,13 @@ client.on('message', msg => {
 	{
 		loopChannel = Channel;
 		msg.reply('ok fine retard');
-		var tid = setTimeout(loop, 3000);
+		tid = setInterval(loop, 3000);
 	}
-
-	if (msg.content === 'ping') 
+	else if (msg.content === 'stop')
+	{
+		clearTimeout(tid);
+	}
+	else if (msg.content === 'ping') 
 		msg.reply('pong');
 });
 
