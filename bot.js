@@ -4,11 +4,11 @@ client = new Discord.Client();
 var loopChannel;
 var loopCount = 1;
 
-/*function loop()
+function loop()
 {
 	loopChannel.send(loopCount.toString());
 	loopCount++;
-}*/
+}
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -23,12 +23,12 @@ client.on('message', msg => {
 	else
 		console.log('group chat?')
 
-	/*if (msg.content === 'count bitch')
+	if (msg.content === 'count bitch')
 	{
 		loopChannel = Channel;
 		msg.reply('ok fine retard');
 		var tid = setTimeout(loop, 3000);
-	}*/
+	}
 
 	if (msg.content === 'ping') 
 		msg.reply('pong');
