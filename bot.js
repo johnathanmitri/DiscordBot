@@ -4,7 +4,7 @@ Discord = require('discord.js');
 client = new Discord.Client();
 
 var loopChannel;
-var loopCount = 96901;
+var loopCount = 154840;
 var tid;
 
 function loop()
@@ -26,13 +26,13 @@ client.on('message', msg => {
 	else
 		console.log('group chat?')
 
-	if (msg.content === 'count bitch')
+	if (msg.content === 'count5648548')
 	{
 		loopChannel = Channel;
 		msg.reply('ok fine retard');
 		tid = setInterval(loop, 1500);
 	}
-	else if (msg.content === '5648548')
+	else if (msg.content === 'stop5648548')
 	{
 		clearTimeout(tid);
 	}
